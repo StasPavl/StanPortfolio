@@ -1,10 +1,14 @@
 package com.stanportfolio.config;
 
+import com.stanportfolio.web.services.CustomUserDetailsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
@@ -34,5 +38,21 @@ public class WebSecurityConfiguration {
         httpSecurity.headers().frameOptions().disable();
 
         return httpSecurity.build();
+    }
+    @Bean
+    public UserDetailsService getUserDetailsService(){
+        return new CustomUserDetailsService();
+    }
+    @Bean
+    public BCryptPasswordEncoder getBCryptPasswordEncoder(){
+        return new BCryptPasswordEncoder();
+    }
+
+    @Bean
+    public DaoAuthenticationProvider authenticationProvider(){
+        var authProvider = new DaoAuthenticationProvider();
+            authProvider.setUserDetailsService(getUserDetailsService());
+            authProvider.setPasswordEncoder(getBCryptPasswordEncoder());
+        return authProvider;
     }
 }
