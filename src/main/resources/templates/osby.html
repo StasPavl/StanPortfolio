@@ -15,16 +15,16 @@
 <body class="bg-gs">
     <div th:replace="~{fragments/header::header}"></div>
     <div class="px-4 text-center">
-        <img src="../static/images/portfolio.png.png" width="100%" height="100%" th:src="@{images/portfolio.png}" alt="Logo">
 
+        <h1>Welcome to Stan-Studios</h1>
         <div style="display: flex">
             <div class="content-split">
-                <iframe width="550" height="360" src="" title="About Me">
-
-                </iframe>
+                <a class="navbar navbar-brand discord-link d-flex justify-content-end" href="#" th:href="@{https://discord.gg/Pgy9vAPv}">
+                    <img src="../static/images/panda.webp" th:src="@{images/panda.webp}" width="90%" height="90%" alt="PandaDev Logo">
+                </a>
             </div>
             <div class="col-lg-6 mx-auto">
-                <h1>Welcome to Stan-Studios</h1>
+
                     <h3>Java Developer</h3>
                     I have gained expertise in Spring Framework, including Spring MVC, Spring Data JPA,
                     Hibernate ORM, and RESTful APIs using Spring Web to create robust and scalable applications.

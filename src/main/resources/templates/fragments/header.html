@@ -3,7 +3,7 @@
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6" lang="en">
 <head>
     <link href="/webjars/bootstrap/5.2.3/css/bootstrap.css" rel="stylesheet"/>
-    <link href="/css/Style.css" rel="stylesheet"/>
+    <link href="/css/style.css" rel="stylesheet"/>
     <script type="text/javascript" src="/webjars/jquery/3.6.4/jquery.min.js"></script>
     <script type="text/javascript" src="/webjars/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
 
@@ -20,26 +20,26 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                    <li class="nav-item" sec:autorize="hasRole(ROLE_OWNER)">
+                    <li class="nav-item" sec:autorize="hasRole('ROLE_OWNER')">
                         <a class="nav-link" href="#" th:href="@{/acp}">Database</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" th:href="@{/}">OSBY</a>
+                        <a class="nav-link" href="#" th:href="@{/osby}">OSBY</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" th:href="@{/}">The Runiverse</a>
+                        <a class="nav-link" href="#" th:href="@{/runiverse}">The Runiverse</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" th:href="@{/}">I-RPG</a>
+                        <a class="nav-link" href="#" th:href="@{/irpg}">I-RPG</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" th:href="@{/}">Project Penguin</a>
+                        <a class="nav-link" href="#" th:href="@{/penguin}">Project Penguin</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" th:href="@{/}">Clock</a>
+                        <a class="nav-link" href="#" th:href="@{/clock}">Clock</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" th:href="@{}">Misc.</a>
+                        <a class="nav-link" href="#" th:href="@{/misc}">Misc.</a>
                     </li>
                 </ul>
             </div>

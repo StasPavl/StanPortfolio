@@ -10,7 +10,7 @@ import java.util.Objects;
 @Configuration
 public class Logger {
 
-    @Value("${application.debug")
+    @Value("${application.debug}")
     private boolean debugMode;
 
     private static Logger logger;

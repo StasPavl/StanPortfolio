@@ -16,6 +16,7 @@ public class UserProfile {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long uid;
 
+    private String email;
     private String username;
     private String encryptedPassword;
 

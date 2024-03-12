@@ -22,7 +22,12 @@ public class WebSecurityConfiguration {
                     try {
                         request
                                 .requestMatchers(
-                                        "/", "/home", "/index").permitAll()
+                                        "/",
+                                        "/home",
+                                        "/index",
+                                        "/css/**",
+                                        "/images/**",
+                                        "/osby").permitAll()
                                 .requestMatchers("/acp/**").hasAnyRole("DEVELOPER","OWNER")
                                 .requestMatchers("/profile").hasRole("USER")
                                 .anyRequest().authenticated()

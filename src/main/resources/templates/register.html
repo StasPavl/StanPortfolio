@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <link href="/webjars/bootstrap/5.2.3/css/bootstrap.css" rel="stylesheet"/>
+    <link href="/css/style.css" rel="stylesheet"/>
+    <script type="text/javascript" src="/webjars/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1">
+    <title>Stan-Studios | Home</title>
+</head>
+<body class="bg-gs">
+    <div th:replace="~{fragments/header::header}"></div>
+    <div class="px-4 text-center">
+        <img src="../static/images/portfolio.png.png" width="100%" height="100%" th:src="@{images/portfolio.png}" alt="Logo">
+        <h1>Welcome to Stan-Studios Registration</h1>
+        <div class="container align-content-center">
+            <form action="#" th:action="@{/api/v1/registration/newuser}" th:object="${newUser}" method="post">
+                <label>
+                    <input type="text" placeholder="Username" style="width: 160px; text-align: center" th:field="*{username}" required>
+                </label>
+                <label>
+                    <input type="text" placeholder="Email" style="width: 160px; text-align: center" th:field="*{email}" required>
+                </label>
+                <label>
+                    <input type="text" placeholder="{Password}" style="width: 160px; text-align: center" th:field="*{password}" required>
+                </label>
+                <label>
+                    <input type="text" placeholder="Re-type pass" style="width: 160px; text-align: center" th:field="*{rePassword}" required>
+                </label>
+                <button type="submit" class="btn btn-primary">Register</button>
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>
