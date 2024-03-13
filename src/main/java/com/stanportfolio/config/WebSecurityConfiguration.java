@@ -27,7 +27,9 @@ public class WebSecurityConfiguration {
                                         "/index",
                                         "/css/**",
                                         "/images/**",
-                                        "/osby").permitAll()
+                                        "/osby",
+                                        "/register",
+                                        "/api/v1/registration/**").permitAll()
                                 .requestMatchers("/acp/**").hasAnyRole("DEVELOPER","OWNER")
                                 .requestMatchers("/profile").hasRole("USER")
                                 .anyRequest().authenticated()
