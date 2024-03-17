@@ -30,7 +30,7 @@ public class WebSecurityConfiguration {
                                 //Resources
                                 .requestMatchers("/api/v1/registration/**").permitAll()
                                 //Administration
-                                .requestMatchers("/css/**", "/images/**", "/webjars/**").permitAll()
+                                .requestMatchers("/docs/**","/css/**", "/images/**", "/webjars/**").permitAll()
                                 //Administration
                                 .requestMatchers("/acp/**").hasAnyRole("DEVELOPER","OWNER")
                                 //User-related
