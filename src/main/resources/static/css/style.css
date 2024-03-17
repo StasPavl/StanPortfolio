@@ -1,7 +1,33 @@
 .bg-gs {
-    background-color: rgba(49,42,77,0.88);
+    /*background-color: rgba(49,42,77,0.88);*/
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 10%, rgba(0,0,0,1) 100%);
 }
 
 .content-split {
     width: 42%;
+}
+#text {
+
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+}
+#header_text{
+    font-family: Papyrus, fantasy;
+    font-size: 4em;
+}
+#parag{
+    font-family: Courier, monospace;
+    font-size: 1em;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%; /* Adjust the width as needed */
+    max-width: 800px; /* Set a maximum width if desired */
+    padding: 20px;
+    border-radius: 10px; /* Optional: Add border-radius for rounded corners */
 }

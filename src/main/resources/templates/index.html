@@ -11,31 +11,25 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale-1">
     <title>Stan-Studios | Home</title>
+
 </head>
 <body class="bg-gs">
     <div th:replace="~{fragments/header::header}"></div>
-    <div class="px-4" style="text-align: center">
-        <img src="../static/images/portfolio.png.png" width="100%" height="100%" th:src="@{images/portfolio.png}" alt="Logo">
+    <div class="centered">
+        <div >
+            <div id="text" class=" mx-auto">
+                <h1 id="header_text">Welcome to Stan-Portfolio</h1>
+                <div id="parag">
+                    <h2 >Back-end Java Developer</h2>
+                    <p >I design and code beautifully things, and I love what I do. </p>
 
-        <div style="display: flex">
-            <div class="content-split">
-                <iframe width="550" height="360" src="" title="About Me">
-
-                </iframe>
-            </div>
-            <div class="col-lg-6 mx-auto">
-                <h1>Welcome to Stan-Studios</h1>
-                    <h3>Java Developer</h3>
-                    I have gained expertise in Spring Framework, including Spring MVC, Spring Data JPA,
-                    Hibernate ORM, and RESTful APIs using Spring Web to create robust and scalable applications.
-                    I have also worked extensively on securing applications with Spring Security,
-                    allowing me to gain a deep understanding of best practices and security concerns.
-                    Apart from my technical skills, I am passionate about outdoor activities, particularly cycling,
-                    and thrive on challenging myself to achieve my goals.
-                    Growing up with a math teacher and an engineer in the household sparked an early interest in problem-solving,
-                    which has stayed with me throughout my career. As a result, I have a keen eye for detail,
-                    and I am always looking for ways to improve my work and my team's work.
-                    I am multilingual, and I enjoy learning new languages as it expands my cultural understanding and helps me create long-term friendships.
+                </div>
+                <div >
+                    <a  href="#" th:href="@{https://github.com/StasPavl}">
+                        <img src="../static/images/panda_pc.png" th:src="@{images/panda_pc.png}" width="35%" height="35%" alt="PandaDev homeLogo">
+                    </a>
+                </div>
+                My GitHub
 
             </div>
         </div>

@@ -14,18 +14,21 @@
 </head>
 <body class="bg-gs">
     <div th:replace="~{fragments/header::header}"></div>
-    <div class="px-4" style="text-align: center">
+    <div id="text" class="px-4" style="text-align: center">
 
-        <h1>Welcome to Stan-Studios</h1>
+        <h1 id="header_text">About Me</h1>
+        <br>
+        <br>
+        <br>
         <div style="display: flex">
             <div class="content-split">
                 <a class="navbar navbar-brand discord-link d-flex justify-content-end" href="#" th:href="@{https://discord.gg/Pgy9vAPv}">
-                    <img src="../static/images/panda.webp" th:src="@{images/panda.webp}" width="90%" height="90%" alt="PandaDev Logo">
+                    <img src="../static/images/panda.webp" th:src="@{images/panda.webp}" width="50%" height="50%" alt="PandaDev Logo">
                 </a>
             </div>
-            <div class="col-lg-6 mx-auto">
-
-                    <h3>Java Developer</h3>
+            <div class="col-lg-4 mx-auto">
+                <div id="parag">
+                    <h2 >Java Developer</h2>
                     I have gained expertise in Spring Framework, including Spring MVC, Spring Data JPA,
                     Hibernate ORM, and RESTful APIs using Spring Web to create robust and scalable applications.
                     I have also worked extensively on securing applications with Spring Security,
@@ -36,6 +39,9 @@
                     which has stayed with me throughout my career. As a result, I have a keen eye for detail,
                     and I am always looking for ways to improve my work and my team's work.
                     I am multilingual, and I enjoy learning new languages as it expands my cultural understanding and helps me create long-term friendships.
+
+                </div>
+
 
             </div>
         </div>
